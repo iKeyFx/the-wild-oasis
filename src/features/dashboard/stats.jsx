@@ -7,7 +7,7 @@ import Stat from "./Stat";
 import { HiOutlineBanknotes } from "react-icons/hi2";
 import { formatCurrency } from "../../utils/helpers";
 
-function stats({ bookings, confirmedStays, numDays, cabinCount }) {
+function Stats({ bookings, confirmedStays, numDays, cabinCount }) {
   const numBookings = bookings.length;
   const sales = bookings.reduce((acc, cur) => acc + cur.totalPrice, 0);
   const checkins = confirmedStays.length;
@@ -46,4 +46,4 @@ function stats({ bookings, confirmedStays, numDays, cabinCount }) {
   );
 }
 
-export default stats;
+export default Stats;
